@@ -1,7 +1,8 @@
 import { useContext } from "react";
-import ShopContext from "../Context/ShopContext";
+import {ShopContext} from "../Context/ShopContext";
 import { useParams } from "react-router-dom";
 import ProductHd from "../components/ProductHd";
+import ProductDisplay from "../components/ProductDisplay";
 
 const Product = () => {
   const { all_products } = useContext(ShopContext);
@@ -14,6 +15,7 @@ const Product = () => {
     <section>
       <div>
         <ProductHd product={product} />
+        <ProductDisplay product={product} />
       </div>
     </section>
   );
